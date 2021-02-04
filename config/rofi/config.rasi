@@ -1,0 +1,6 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    columns: 3;
+    color-window: "#4c566a, #81a1c1";
+}

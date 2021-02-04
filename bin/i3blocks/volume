@@ -1,0 +1,8 @@
+#!/bin/bash 
+case $BLOCK_BUTTON in
+    1) exec pavucontrol ;;
+esac
+
+[ $(pamixer --get-mute) = true ] && echo " " && exit
+VAL=$(pamixer --get-volume)
+echo "  $VAL"

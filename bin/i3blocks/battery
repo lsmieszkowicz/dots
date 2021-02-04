@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+case $BLOCK_BUTTON in
+    1) xfce4-power-manager-settings& ;;
+esac
+
+BAT1=$(cat /sys/class/power_supply/BAT0/capacity)
+BAT2=$(cat /sys/class/power_supply/BAT1/capacity)
+[ $BAT1 -lt 20 ] && B1TXT="<span foreground='#bf616a'>   $BAT1 </span>" || B1TXT="  $BAT1"
+[ $BAT2 -lt 20 ] && B2TXT="<span foreground='#bf616a'>   $BAT2 </span>" || B2TXT="  $BAT2"
+
+echo "$B1TXT   $B2TXT"

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+    1) nm-connection-editor& ;;
+esac
+
+WIFI_NAME=$(nmcli connection show --active | awk '/wifi/ {print $1}')
+echo "  <span foreground='#a3be8c'>$WIFI_NAME</span>"

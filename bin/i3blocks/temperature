@@ -1,0 +1,4 @@
+#!/bin/bash
+
+TEMP=$(acpi -t | awk '{print $4}' | sed 's/\.[0-9]//')
+echo " $TEMP°C"

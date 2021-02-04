@@ -1,0 +1,4 @@
+#!/bin/bash
+
+f=$(find ~/notes -type f | fzf)
+vim $f

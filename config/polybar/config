@@ -1,0 +1,68 @@
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+background = #3b77bc
+bg-light = #64a2d8
+text = #ffffff
+green = #81c046
+red = #de482b
+yellow = fccf03
+
+[bar/example]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 24
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.text}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Lucida Grande:pixelsize=10;1
+font-1 = Font Awesome 5 Free:pixelsize=10;1
+font-2 = Font Awesome 5 Free:style=solid:pixelsize=10;1
+font-3 = Font Awesome 5 Brands:pixelsize=10;1
+
+modules-left = i3
+modules-center = date
+modules-right = 
+
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/i3]
+type = internal/i3
+index-sort = true
+
+label-focused = %index%
+label-focused-foreground = ${colors.text}
+label-focused-background = ${colors.yellow}
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-background = ${colors.green}
+label-unfocused-padding = 2
+
+label-urgent = %index%
+label-urgent-foreground = ${colors.text}
+label-urgent-background = ${colors.red}
+label-urgent-padding = 2
+
+[module/date]
+type = internal/date
+date = %a
+time = %H:%M
+format = <label>
+label = %date%, %time%

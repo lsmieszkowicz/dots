@@ -1,0 +1,6 @@
+#!/bin/bash
+
+value=$(echo -e "10\n20\n30\n50\n75\n100" | dmenu)
+#xbacklight -set $value
+[ $value -lt 101 -a $value -gt 4 ] && xbacklight -set $value
+

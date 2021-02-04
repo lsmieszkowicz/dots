@@ -1,0 +1,15 @@
+alias la="ls -a"
+alias ll="ls -l"
+alias cl="clear"
+
+alias pac="sudo pacman"
+alias paci="sudo pacman -S"
+alias pacs="sudo pacman -Ss --color=always"
+alias pacu="sudo pacman -Syy && pacman -Qu"
+
+alias yi="yay --noconfirm -S"
+alias ys="yay -Ss --color=always"
+alias yu="yay -Syy && yay -Qu"
+
+alias v="vim"
+alias sx="startx"

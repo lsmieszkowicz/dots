@@ -1,0 +1,4 @@
+#!/bin/bash
+
+VAL=$(xbacklight -get | sed -E "s/\.[0-9]{6}//")
+echo  $VAL
